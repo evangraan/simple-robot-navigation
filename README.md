@@ -1,4 +1,4 @@
-#Introduction:
+# Introduction:
 
 This repository is an implementation of a simple robot with limited navigation:
 
@@ -34,14 +34,14 @@ F
   
  Would return True.
 
-#Implementations
+# Implementations
 This repositiory contains two implementations:
-##prototype/
+## prototype/
 A low fidelity prototype aimed at verifying that algorithmic ideas work with some basic unit testing for the core concepts
 
-##robot/
+## robot/
 A high fidelity implementation. BDD features and steps reside in features/
 
-##READMEs
+## READMEs
 Each of these implementations has its own README markdown file with instruction for testing, running and design discussions.
 
