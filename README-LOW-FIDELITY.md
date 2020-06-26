@@ -19,7 +19,6 @@ de-risking and exploring the solution space rapidly and in a targeted manner.
 # Running
 ## Test suite
 ```
-$ cd Omnigen
 $ source venv/bin/activate
 $ pip install -r requirements.txt
 $ python unittests/tests.py
@@ -34,7 +33,6 @@ OK
 
 ## Implementation
 ```
-$ cd Omnigen
 $ source venv/bin/activate
 $ pip install -r requirements.txt
 
