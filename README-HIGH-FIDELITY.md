@@ -90,7 +90,7 @@ True
 * navigator.reset()
 * navigator.calculate_distance() -> float
 
-##Interpreter:
+## Interpreter:
 * interpreter.logger -> logger
 * interpreter.debug -> bool
 * interpreter.nav -> Navigator
