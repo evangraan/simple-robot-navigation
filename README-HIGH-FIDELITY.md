@@ -1,11 +1,11 @@
-#Introduction:
+# Introduction:
 
 This document uses markdown and is best read in a markdown-capable viewer such as github.
 
 You can run the program in this repository and it will output the distance and whether the loop return value was True or
 False.
 
-#Notes
+# Notes
 * This code was developed using a behaviour driven approach using behave as BDD framework.
 * Each feature was implemented in a TDD manner, writing the test first, writing the code to make the test pass,
   then refactoring the design.
@@ -19,13 +19,13 @@ False.
 * I love clean code and strive to keep functions to 4-6 lines. For high fidelity implementations it is important though
 to include validation and strategic debug code as well.
 
-#Design
+# Design
 The Robot class consist of an interpreter and a navigator. The interpreter reads the instructions and asks the navigator
 to perform the necessary actions. The robot then asks its navigator what the distance traveled is and whether circles
 were completed. A future design improvement would be to change the Containment relationshiop for the Robot re: the
 Interpreter and Navigator to be one of Aggregation and inject these into the Robot on start-up.
 
-#Non-functional requirements
+# Non-functional requirements
 * When reading the instruction file, it can either be parsed line by line and instructions executed as parsed, or all
   lines at once and there-after instructions executed. In this implementation I opted to read all instructions at once,
   then iterate, skipping invalid ones and empty lines and executing valid instructions. I.e. this
@@ -35,10 +35,9 @@ Interpreter and Navigator to be one of Aggregation and inject these into the Rob
   and reject the entire instruction set if some instructions are invalid. In that case, this implementation would
   already have the full list of instructions available for validation and could easily be adapted to reject if invalid.
 
-#Running
-##Test suite
+# Running
+## Test suite
 ```
-$ cd Omnigen
 $ source venv/bin/activate
 $ pip install -r requirements.txt
 $ behave
@@ -49,9 +48,8 @@ $ behave
 
 ```
 
-##Implementation
+## Implementation
 ```
-$ cd Omnigen
 $ source venv/bin/activate
 $ pip install -r requirements.txt
 
@@ -69,7 +67,7 @@ Warning: some instructions were invalid
 True
 ```
 
-#Assumptions:
+# Assumptions:
 * A circle is identified as follows:
     'Any path that returns the robot to the origin (i.e. a loop of some kind) even if the robot crosses its own path
     one or multiple times?'
@@ -77,14 +75,14 @@ True
   just turning does not constitute a 'return to the origin'. This behaviour can be easily changed though.
 
 
-#APIs
-##Robot
+# APIs
+## Robot
 * robot.nav -> Navigator
 * robot.debug -> bool
 * robot.operate(instructions_file: str, debug: bool = False) -> bool
 * robot.get_notifications() -> [str]
 
-##Navigator:
+## Navigator:
 * navigator.direction -> str
 * navigator.distance -> int
 * navigator.loops -> int
