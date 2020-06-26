@@ -12,7 +12,7 @@ This document uses markdown and is best read in a markdown-capable viewer such a
 # Tests
 Three unit tests were provided, proving the core of the algorithms
 
-# esign
+# Design
 This prototype does not have any design, as that will emerge during the BDD process. This prototype is all about 
 de-risking and exploring the solution space rapidly and in a targeted manner.
  
